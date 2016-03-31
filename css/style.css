@@ -10,3 +10,7 @@
 body{
   background: #2196F3;
 }
+
+a.thumbnail img{
+  max-width:130px;
+}
