@@ -1,6 +1,7 @@
 <html ng-app="employeeApp">
 <head>
   <meta charset="utf-8">
+  <!-- <base href="/"> -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="AngularJS Code Sample">
   <meta name="keywords" content="AngularJS">
@@ -9,16 +10,19 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <script src="js/angular.js"></script>
+  <script src="js/angular-ui-router.js"></script>
+  <script src="js/routes/employees.routes.js"></script>
   <script src="js/controllers/employees.controller.js"></script>
+  <script src="js/controllers/employee.controller.js"></script>
   <script src="js/filters/employees.filter.js"></script>
   <script src="js/services/employees.service.js"></script>
 </head>
-<body ng-controller="employeeController">
+<body>
 
   <div ng-include="'views/nav.html'"></div>
 
   <div class="container-fluid">
-    <div ng-include="employeeListView"></div>
+    <div ui-view></div>
   </div>
 
 </body>
